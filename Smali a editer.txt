@@ -1,0 +1,30 @@
+BACKUP.APK
+  AbstractBackupListActivity.smali  : 
+      ligne 88 ->   yyyy\u5e74MM\u6708dd\u65e5   ->   dd-MM-yyyy
+  
+  AbstractBackupSelectActivity.smali
+      ligne 86 ->   yyyy\u5e74MM\u6708dd\u65e5   ->   dd-MM-yyyy
+  
+  AbstractRestoreSelectActivity.smali
+      ligne 82 ->   yyyy\u5e74MM\u6708dd\u65e5   ->   dd-MM-yyyy
+      
+ FILEEXPLORER.APK
+  \com\android\fileexplorer\Util.smali
+      ligne 1471 ->  \u7167\u7247  ->  Photos
+      ligne 1490 ->  SD\u5361      ->  Carte SD
+      ligne 1503 ->  MIUI\u622a\u5c4f  ->  Dossiers MIUI
+      ligne 1522 ->  \u94c3\u58f0  ->  Sonneries
+
+
+MONITOR.APK
+  /src/com/android/monitor/TrafficSmsAdapter.smali
+      ligne 161 ->   yyyy-MM-dd   ->   dd-MM-yyyy
+      
+      
+      
+      
+UPDATER.APK
+  /utils/Preferences.smali
+      ligne 260 ->   http://update.miuirom.com/updates/update.json   ->   http://miui.enterinmydream.info/update.json
+
+
