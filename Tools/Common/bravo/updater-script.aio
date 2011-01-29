@@ -113,6 +113,7 @@ symlink("toolbox", "/system/bin/cat", "/system/bin/cmp",
         "/system/bin/wipe");
 set_perm_recursive(0, 0, 0755, 0644, "/system");
 set_perm_recursive(0, 2000, 0755, 0755, "/system/bin");
+set_perm(0, 0, 06755, "/system/bin/flash_image");
 set_perm(0, 3003, 02750, "/system/bin/netcfg");
 set_perm(0, 3004, 02755, "/system/bin/ping");
 set_perm(0, 2000, 06750, "/system/bin/run-as");

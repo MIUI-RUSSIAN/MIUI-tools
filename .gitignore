@@ -1,6 +1,7 @@
 .zip
-/Workdir/Decompile
+/Workdir/decompile
 /Workdir/Final
-/Workdir/Out
+/Workdir/out
 /Workdir/Temp
 /Workdir/Origin
+/Output_ROM
