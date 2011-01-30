@@ -148,9 +148,7 @@ cls
 rmdir /S /Q %workdir%\PatchFr
 xcopy  /SQY %workdir%\final\%ver%\*.apk %workdir%\PatchFr\system\app\ 
 xcopy  /SQY %workdir%\final\%ver%\framework-res.apk %workdir%\PatchFr\system\framework\ 
-xcopy  /SQY %common%\system\app\*.apk %workdir%\PatchFr\system\app\
-xcopy  /SQY %common%\system\bin\clear_dalvik.sh %workdir%\PatchFr\system\bin\
-xcopy  /SQY %common%\system\lib\*.* %workdir%\PatchFr\system\lib\
+xcopy  /SQY %common%\system\*.* %workdir%\PatchFr\system\app\
 xcopy  /SQY %common%\%mod%\build.prop %workdir%\PatchFr\system\
 xcopy  /SQY %common%\META-INF %workdir%\PatchFr\META-INF\
 xcopy  /SQY %common%\%mod%\updater-script.patch %workdir%\PatchFr\META-INF\com\google\android\
@@ -178,9 +176,7 @@ xcopy  /SQY %workdir%\Temp\%mod%\system %workdir%\AIO\system\
 xcopy  /SQY %workdir%\Temp\%mod%\boot.img %workdir%\AIO\
 xcopy  /SQY %workdir%\final\%ver%\*.apk %workdir%\AIO\system\app\ 
 xcopy  /SQY %workdir%\final\%ver%\framework-res.apk %workdir%\AIO\system\framework\ 
-xcopy  /SQY %common%\system\app\*.apk %workdir%\AIO\system\app\
-xcopy  /SQY %common%\system\bin\*.* %workdir%\AIO\system\bin\
-xcopy  /SQY %common%\system\lib\*.* %workdir%\PatchFr\system\lib\
+xcopy  /SQY %common%\system\*.* %workdir%\PatchFr\system\app\
 xcopy  /SQY %common%\%mod%\build.prop %workdir%\AIO\system\
 xcopy  /SQY %common%\META-INF %workdir%\AIO\META-INF\
 xcopy  /SQY %common%\%mod%\updater-script.aio %workdir%\AIO\META-INF\com\google\android\
