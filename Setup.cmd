@@ -64,6 +64,7 @@ GOTO menu
 cls
 FOR /r %workdir%\origin\%ver%\ %%i IN (*.apk) DO (
 xcopy  /SY ..\Fr\%%~ni %workdir%\Decompile\%ver%\%%~ni)
+%tools%\smali.vbs %ver% %CD%
 pause
 GOTO menu
 
