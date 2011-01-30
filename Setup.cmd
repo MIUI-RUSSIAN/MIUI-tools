@@ -176,7 +176,7 @@ xcopy  /SQY %workdir%\Temp\%mod%\system %workdir%\AIO\system\
 xcopy  /SQY %workdir%\Temp\%mod%\boot.img %workdir%\AIO\
 xcopy  /SQY %workdir%\final\%ver%\*.apk %workdir%\AIO\system\app\ 
 xcopy  /SQY %workdir%\final\%ver%\framework-res.apk %workdir%\AIO\system\framework\ 
-xcopy  /SQY %common%\system\*.* %workdir%\PatchFr\system\app\
+xcopy  /SQY %common%\system\*.* %workdir%\AIO\system\
 xcopy  /SQY %common%\%mod%\build.prop %workdir%\AIO\system\
 xcopy  /SQY %common%\META-INF %workdir%\AIO\META-INF\
 xcopy  /SQY %common%\%mod%\updater-script.aio %workdir%\AIO\META-INF\com\google\android\
