@@ -197,8 +197,8 @@ GOTO menu2
 :hotfix
 cls
 rmdir /S /Q %workdir%\Hotfix
-xcopy  /SQY %home%\final\%ver%\*.apk %workdir%\Hotfix\system\app\ 
-xcopy  /SQY %home%\final\%ver%\framework-res.apk %workdir%\Hotfix\system\framework\ 
+xcopy  /SQY %workdir%\final\%ver%\*.apk %workdir%\Hotfix\system\app\ 
+xcopy  /SQY %workdir%\final\%ver%\framework-res.apk %workdir%\Hotfix\system\framework\ 
 xcopy  /SQY %common%\system\bin\clear_dalvik.sh %workdir%\Hotfix\system\bin\
 xcopy  /SQY %common%\%mod%\build.prop %workdir%\Hotfix\system\
 xcopy  /SQY %common%\META-INF %workdir%\Hotfix\META-INF\
