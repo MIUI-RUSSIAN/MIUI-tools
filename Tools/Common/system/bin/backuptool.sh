@@ -24,7 +24,6 @@ app/Facebook.apk
 app/FOTAKill.apk
 app/GenieWidget.apk
 app/Gmail.apk
-app/GoogleBackupTransport.apk
 app/GoogleCalendarSyncAdapter.apk
 app/GoogleContactsSyncAdapter.apk
 app/GoogleFeedback.apk
@@ -35,7 +34,6 @@ app/GoogleServicesFramework.apk
 app/googlevoice.apk
 app/HtcCopyright.apk
 app/HtcEmailPolicy.apk
-app/HtcSettings.apk
 app/kickback.apk
 app/LatinImeTutorial.apk
 app/Maps.apk
