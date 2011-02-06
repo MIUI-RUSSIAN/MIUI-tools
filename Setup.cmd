@@ -172,6 +172,7 @@ mkdir Temp\%mod%
 cd Temp\%mod%
 cmd /c "%zip%\7z.exe x %base%\%mod%\miui-%mod%-%ver%_deodexed-signed.zip"
 cd %workdir%\
+xcopy  /SQY %workdir%\Temp\%mod%\META-INF\com\android %workdir%\AIO\META-INF\com\android\
 xcopy  /SQY %workdir%\Temp\%mod%\system %workdir%\AIO\system\
 xcopy  /SQY %workdir%\Temp\%mod%\boot.img %workdir%\AIO\
 xcopy  /SQY %workdir%\final\%ver%\*.apk %workdir%\AIO\system\app\ 
