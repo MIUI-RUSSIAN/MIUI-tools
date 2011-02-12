@@ -148,7 +148,7 @@ cls
 rmdir /S /Q %workdir%\PatchFr
 xcopy  /SQY %workdir%\final\%ver%\*.apk %workdir%\PatchFr\system\app\ 
 xcopy  /SQY %workdir%\final\%ver%\framework-res.apk %workdir%\PatchFr\system\framework\ 
-xcopy  /SQY %common%\system\*.* %workdir%\PatchFr\system\app\
+xcopy  /SQY %common%\system\*.* %workdir%\PatchFr\system\
 xcopy  /SQY %common%\%mod%\build.prop %workdir%\PatchFr\system\
 xcopy  /SQY %common%\META-INF %workdir%\PatchFr\META-INF\
 xcopy  /SQY %common%\%mod%\updater-script.patch %workdir%\PatchFr\META-INF\com\google\android\

@@ -53,33 +53,16 @@ h1 {
 
 </head>
 <body>
-<h2>1.2.4</h2>
+<h2>1.2.11</h2>
 <h1>Téléphone:</h1>
 <li>Réparation de certaines requêtes qui peuvent provoquer des FC 
-<li>Restauration des réglages du menu de la couleur de la police
-
-<h1>SMS:</h1>
-<li>réparation de téléphone de transfert de perdre le contenu du rapport 
-<li>Les fenêtres pop-up nombre fixe de messages le problème ne peut être commuté 
-<li>Correction d'ajuster l'appel de masse et l'alignement du texte
-<li>Parfois, une liste des réparations multiples "ré-émis" ou "supprimer" problème touche liste de réparation page tête en vrac les questions d'information opérationnels 
-
-<h1>Desktop:</h1>
-<li>Appuyez sur la fonctionnalité de restauration Backspace touche SET reste même après la question a poussé 
-<li>FC d'ajouter des plug-in parfois résout le problème 
-<li>Verrou de la carte Sim réparer un problème va redémarrer 
-<li>FC résoudre certains problèmes cachés 
-<li>Optimisation de l'icône du dossier dans la façon dont la vitesse de défilement 
+<li>Fixer le journal des appels
 
 <h1>Thème:</h1>
-<li>Thème général de l'optimisation des applications, si le paquet thème ne comprend pas les sonneries de ne pas modifier l'actuel 
-<li>Réparation à la liste des sonneries d'erreur Etat lorsque le problème de l'amour 
-<li>Réparation de l'application de bureau aura une incidence sur les sujets locaux, dial-up ou d'autres problèmes d'interface 
-<li>Réparation a donné le ton lorsque les sonneries obtenir des sonneries et la notification
-<li>Réparation ne peut pas avoir le temps de lire les données réseau de bulles toujours flotter sur l'extérieur
-<li>Réparation sélectionnés tons sourds induite FC 
-<li>Réparer ou juste après le lancement en raison de commutateur FC mode USB 
-<li>Correction de l'erreur lorsque le thème de sauvegarde 
+<li>Ajout du support de réglage de l'alarme 
+<li>Les Sonneries dans le nouveau système est livré avec l'option "muet" 
+<li>Optimiser le système est livré avec le choix de sonneries
+<li>Réparer certains des thèmes au format correct
 
 <br />
 <div id="footer"> 
