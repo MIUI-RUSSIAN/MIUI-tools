@@ -53,16 +53,8 @@ h1 {
 
 </head>
 <body>
-<h2>1.2.11</h2>
-<h1>Téléphone:</h1>
-<li>Réparation de certaines requêtes qui peuvent provoquer des FC 
-<li>Fixer le journal des appels
-
-<h1>Thème:</h1>
-<li>Ajout du support de réglage de l'alarme 
-<li>Les Sonneries dans le nouveau système est livré avec l'option "muet" 
-<li>Optimiser le système est livré avec le choix de sonneries
-<li>Réparer certains des thèmes au format correct
+<h2>1.2.18</h2>
+<h1>en cours de traduction:</h1>
 
 <br />
 <div id="footer"> 
