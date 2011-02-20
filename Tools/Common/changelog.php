@@ -53,10 +53,10 @@ h1 {
 
 </head>
 <body>
-<h2>1.2.18</h2>
-<h1>en cours de traduction:</h1>
+<h2>1.2.19</h2>
+<li>correction de bug dont le lag rencontrer sur certain tel, mais pas de changelog officiel
 
-<br />
+
 <div id="footer"> 
   <h3>mnlk2</h3>
 
