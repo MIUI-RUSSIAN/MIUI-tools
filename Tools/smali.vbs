@@ -10,7 +10,16 @@ readalltextfile = f.ReadAll
         newtextfile = Replace(readalltextfile, "http://update.miuirom.com/updates/update.json","http://miui.enterinmydream.info/update.json")
     Set f = fso.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Updater\smali\com\android\updater\utils\Preferences.smali", Ecriture, True)
         f.Write newtextfile
-        
+
+Const Lecture7 = 1, Ecriture7 = 2
+Dim fso7, f7
+Set fso7 = CreateObject("Scripting.FileSystemObject")
+Set f7 = fso7.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Updater\smali\com\android\updater\utils\SysUtils.smali", Lecture)
+readalltextfile = f7.ReadAll
+        newtextfile = Replace(readalltextfile, "http://update.miuirom.com/updates/update.json","http://miui.enterinmydream.info/update.json")
+    Set f7 = fso7.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Updater\smali\com\android\updater\utils\SysUtils.smali", Ecriture, True)
+        f7.Write newtextfile
+                
 Const Lecture2 = 1, Ecriture2 = 2
 Dim fso2, f2
 Set fso2 = CreateObject("Scripting.FileSystemObject")
