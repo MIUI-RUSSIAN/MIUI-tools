@@ -53,57 +53,50 @@ h1 {
 
 </head>
 <body>
-<h2>1.3.5</h2>
-<li>bugfix de la 1.3.4
+<h2>1.3.11.1</h2> 
 
+<li>Correction FC Miui Music
+<li>Traduction phone.apk (oubli de ma part) 
+<br />
+<br />
+<br />
+<br />
 
-<h2>1.3.4</h2> 
+<h2>1.3.11</h2> 
+
 <h1>Téléphone:</h1>
-<li>clavier T9 optimisé le temps de réponse des requêtes
-<li>Correction des fautes d'orthographe à corriger certaines de la recherche, comme "viens"
-<li>Réparation d'une carte sim, composez le code numéro d'appel d'urgence zone 110 ne permet pas la question
-<li>L'article 182 fixe l'attribution problème
-<li>Réparation d'appel, l'appel à quitter l'interface du capteur, qui interdit à l'utilisateur de l'opération et revenir pour reprendre l'appel de l'interface du capteur
-  
+<li>Heure à laquelle aucune restauration de la carte SIM de Chine appartiennent à la valeur par défaut
+<li>Si le journal des appels entrants dans la réparation sans nombre, le problème semble être vide
+<li>Activer la réparation capteur de proximité, l'appel est répondu ne peut pas être automatiquement allumé problème d'écran noir
+<li>l'écran du téléphone de réparation ne s'allume pas après avoir raccroché problème
+
 <h1>SMS:</h1>
-<li>Ajouter le contenu de base de données SP numéro de service pour accroître et renforcer la capacité des services de SP, la reconnaissance des nombres
-<li>Fix pour supprimer les messages en double entre le thème de, utiliser le thème du système
-<li>La mémoire SMS est pleine restauration de rejeter la logique, conformément à la pratique de l'assouplissement de la commande de la mémoire 2.3 (à confirmer)
-  
+<li>optimisation SMS logique de collecte
+
 <h1>Verrouiller l'écran:</h1>
-<li>Ajouter dans l'interface de blocage à l'écran pour désactiver le bouton d'alimentation à long options fonction, appuyez sur
-<li>Optimiser l'utilisation de l'écran de verrouillage par mot de passe, l'interface d'affichage première commune à déverrouiller, déverrouiller le mot de passe après la Zaishu
-<li>Réparation des problèmes de verrouillage multi-touch causés par des malentendus
-<li>Fond d'écran Fix verrouillage de l'écran est tendu problèmes
-<li>réparation ou remplacement du papier peint écran de verrouillage sera effective après le redémarrage du problème
-  
+<li>réparation écran de verrouillage ne peut pas cliquer sur OK lorsque les problèmes horizontale de l'écran
+
 <h1>Thème:</h1>
-<li>Ajouter plus de pages à la diapositive suivante en vertu d'une ressource sur
-<li>Cadre le thème d'une optimisation de la messagerie unifiée
-<li>problèmes Style système de réparation ne peut être remplacé
-<li>Réparation de l'cliquez sur Gestionnaire de fichiers sur le thème du document question FC
-<li>Cliquez sur le titre de réparation du groupe FC liste de problèmes
-<li>Ouvrir rapidement la liste en ligne de problèmes de réparation causés FC
-<li>Correction du problème montre un groupe de liste vide
-  
+<li>Ajouter plus de pages pour passer en mode plein écran, cliquez sur Aperçu
+<li>Vignette couvrira le problème des frontières de réparation fond d'écran
+<li>Détails sur les réparations extrémité supérieure coulissante ressources erreur
+<li>En tête de liste des catégories d'erreurs ressources fixes
+<li>Optimisation et mondial unifié sujets répertoire de cache
+
+<h1>Paramètres:</h1>
+<li>Logos Ajouter ajoutée aux options
+<li>Paramètres d'optimisation de la bague de réglage et les thèmes de la bague de réglage pour passer à travers
+
 <h1>Musique:</h1>
-<li>Ajouté début et la lecture en pause lorsque les effets sonores se fanent
-<li>Ajouter arrimage de la chanson, le commutateur de transition chansons de son
-<li>Ajouter le filtre sur les fichiers audio petits peuvent être recherchées dans la recherche locale, mais ne peut pas cliquer directement sur Play, vous pouvez modifier le filtre basé sur le seuil fixé à jouer
-<li>Paroles de réparation, l'album montre le réglage par défaut est "ouvert"
-<li>Fixe la musique de fond play pause bug
+<li>Ajout du support pour les liens en ligne MP3 Player (dans la messagerie texte, appuyez sur un lien, démarrez le lecteur)
+<li>Nouveau lecteur de musique en ligne automatiquement cache la chanson suivante
+<li>Nouveau commutateur spectre des reproducteurs, par défaut, vous pouvez partir
+<li>rejet optimale d'occupation CPU chanson pour réduire la consommation d'énergie
 
-<h1>Galerie:</h1>
-<li>Ajouter un diaporama photo, laissez l'écran allumé (ce qui peut être modifié dans le menu de configuration)
-<li>Ajouter des photos en plein écran quand l'effet de réflexion de miroir, désactivé par défaut (peut être modifié dans le menu de configuration)
-<li>Optimisation de l'image plein écran, 3s ne fonctionne pas, le menu contextuel automatiquement retenu
-<li>machines Fix mémoire de petite taille comme le Milestone, la grande image découpée de mémoire et se bloque
-<li>Correction d'un bug où un grand nombre d'images gif dossier, et la vitesse de glissement est élevé, le plantage occasionnel
-<li>L'image montre le temps de réparation appareil photo, date de modification et ne doit pas être affiché
-  
 <h1>Appareil photo:</h1>
-<li>Ajouter la netteté, le contraste, la saturation et la luminosité de l'appui (DHD, Désir, Milestone, le soutien HD2)
-
+<li>curseur de zoom fixer l'écran de l'appareil photo ne prend pas en charge mise à l'échelle, cliquez sur le curseur de zoom ne semble pas
+<li>Réparation certains modèles AF flash clignotant problème
+<li>Effets modèle en utilisant la caméra ne fixe pas l'entrée en vigueur BUG
 
 <div id="footer"> 
   <h3>mnlk2</h3>
