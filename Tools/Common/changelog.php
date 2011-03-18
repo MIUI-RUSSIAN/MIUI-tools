@@ -53,50 +53,37 @@ h1 {
 
 </head>
 <body>
-<h2>1.3.11.1</h2> 
 
-<li>Correction FC Miui Music
-<li>Traduction phone.apk (oubli de ma part) 
-<br />
-<br />
-<br />
-<br />
-
-<h2>1.3.11</h2> 
+<h2>1.3.18</h2> 
 
 <h1>Téléphone:</h1>
-<li>Heure à laquelle aucune restauration de la carte SIM de Chine appartiennent à la valeur par défaut
-<li>Si le journal des appels entrants dans la réparation sans nombre, le problème semble être vide
-<li>Activer la réparation capteur de proximité, l'appel est répondu ne peut pas être automatiquement allumé problème d'écran noir
-<li>l'écran du téléphone de réparation ne s'allume pas après avoir raccroché problème
+<li>Optimisation pour la première fois montre la vitesse de l'interface téléphonique
+<li>L'analyse d'optimisation du numéro de téléphone étrangers
+<li>transmission Milestone appel de réparation ne peut être affiché sous la question des appels
+<li>Correction de quelques fautes d'orthographe problème T9
 
 <h1>SMS:</h1>
-<li>optimisation SMS logique de collecte
+<li>Correction d'un problème de texte bobble
+
+<h1>Contact:</h1>
+<li>Réparation certains de l'ancienne carte SIM de la FC lors de l'importation des contacts
 
 <h1>Verrouiller l'écran:</h1>
-<li>réparation écran de verrouillage ne peut pas cliquer sur OK lorsque les problèmes horizontale de l'écran
-
-<h1>Thème:</h1>
-<li>Ajouter plus de pages pour passer en mode plein écran, cliquez sur Aperçu
-<li>Vignette couvrira le problème des frontières de réparation fond d'écran
-<li>Détails sur les réparations extrémité supérieure coulissante ressources erreur
-<li>En tête de liste des catégories d'erreurs ressources fixes
-<li>Optimisation et mondial unifié sujets répertoire de cache
-
-<h1>Paramètres:</h1>
-<li>Logos Ajouter ajoutée aux options
-<li>Paramètres d'optimisation de la bague de réglage et les thèmes de la bague de réglage pour passer à travers
+<li>Ajouter écran de verrouillage de nouvelles
 
 <h1>Musique:</h1>
-<li>Ajout du support pour les liens en ligne MP3 Player (dans la messagerie texte, appuyez sur un lien, démarrez le lecteur)
-<li>Nouveau lecteur de musique en ligne automatiquement cache la chanson suivante
-<li>Nouveau commutateur spectre des reproducteurs, par défaut, vous pouvez partir
-<li>rejet optimale d'occupation CPU chanson pour réduire la consommation d'énergie
+<li>Ajouter en ligne le mode de lecture aléatoire de la musique automatiquement cache la chanson suivante
+<li>Optimisation de l'utilisation de l'UC
+<li>Optimiser l'efficacité opérationnelle de commutation chansons
+<li>sensibilité au rejet de la médiation ne peut pas être réparé immédiatement Song of the bug
+<li>Fix bug bibliothèque de numérisation (accidentellement modifiées pour résoudre le problème de sonnerie)
+<li>Fil de réparation rejeter un appel, appuyez et causer au lecteur de commencer bug
 
 <h1>Appareil photo:</h1>
-<li>curseur de zoom fixer l'écran de l'appareil photo ne prend pas en charge mise à l'échelle, cliquez sur le curseur de zoom ne semble pas
-<li>Réparation certains modèles AF flash clignotant problème
-<li>Effets modèle en utilisant la caméra ne fixe pas l'entrée en vigueur BUG
+<li>Ajouter des photos après la lecture (désactivé par défaut peut être configuré pour ouvrir)
+<li>playback optimisé, offrant la caméra ramené à la suppression des photos, envoyer des trois fonctions
+<li>Optimisation de la vitesse de réponse clé, aussi vite que possible la réponse aux opérations d'utilisateurs suivants: galerie ouverte, passer à la caméra, bouton de menu, le dos, bouton home
+<li>AF amendement au problème pouvait entraîner l'appareil photo fc
 
 <div id="footer"> 
   <h3>mnlk2</h3>
