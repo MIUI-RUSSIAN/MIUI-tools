@@ -17,7 +17,7 @@
     ui_print("   \\  \\:\\        \\__\\/     \\  \\::/       \\__\\/  ");
     ui_print("    \\__\\/                   \\__\\/               ");
     ui_print("");
-    ui_print("     M I U I - v 1 . 3 . 1 8 French Patch     ");
+    ui_print("     M I U I - v 1 . 3 . 2 5 French Patch     ");
     ui_print("");
     ui_print(" DEVICE:Desire TWITTER:MIUI_mnlk2 PACKAGER:Mnlk2");
     ui_print("      SUPPORT:FrAndroid.com / miui-dev.com      ");

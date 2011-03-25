@@ -43,7 +43,7 @@ FOR /r %workdir%\origin\%ver%\ %%i IN (*.apk) DO (
 echo.
 echo.
 echo ######  %%~ni  ######
-cmd /c %apktools%\apktool d %%i %workdir%/decompile/%ver%/%%~ni)
+cmd /c %apktools%\apktool d %%i %workdir%/decompile/%ver%/%%~ni )
 pause
 GOTO menu
 
@@ -55,7 +55,8 @@ FOR /r %workdir%\origin\%ver%\ %%i IN (*.apk) DO (
 echo.
 echo.
 echo ######  %%~ni  ######
-cmd /c %apktools%\apktool b %workdir%\decompile\%ver%\%%~ni %workdir%/out/%ver%/%%~nxi)
+cmd /c %apktools%\apktool b %workdir%\decompile\%ver%\%%~ni %workdir%/out/%ver%/%%~nxi
+)
 pause
 GOTO menu
 

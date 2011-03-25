@@ -54,36 +54,38 @@ h1 {
 </head>
 <body>
 
-<h2>1.3.18</h2> 
+<h2>1.3.25</h2> 
 
 <h1>Téléphone:</h1>
-<li>Optimisation pour la première fois montre la vitesse de l'interface téléphonique
-<li>L'analyse d'optimisation du numéro de téléphone étrangers
-<li>transmission Milestone appel de réparation ne peut être affiché sous la question des appels
-<li>Correction de quelques fautes d'orthographe problème T9
+<li>Optimisation du commutateur d'appels à trois voies
+<li>La correction de bug multi-touch
+<li>Ajouté 3e édition des pièces d'assurance-chômage (non exhaustive)
 
-<h1>SMS:</h1>
-<li>Correction d'un problème de texte bobble
+<h1>SMS:
+<li>Ajouter une interface nouveau message (3e édition d'assurance-chômage)
+<li>Nouveaux réglages SMS
+<li>Ajouter un nouveau réglage de style de texte et de la collecte
+<li>Ajouter un nouveau message les pièces jointes
+<li>Ajouter une expression un nouveau message
 
 <h1>Contact:</h1>
-<li>Réparation certains de l'ancienne carte SIM de la FC lors de l'importation des contacts
+<li>Contactez la troisième édition de l'optimisation de l'interface utilisateur
 
-<h1>Verrouiller l'écran:</h1>
-<li>Ajouter écran de verrouillage de nouvelles
+<h1>Thèmes:</h1>
+<li>page de détail de réparation pour la lecture audio lors du passage du même cycle
+<li>Fix Télécharger Détails page n'est pas complète dislocation bouton interrupteur causé
+<li>Ajouter à la liste des applications tierces interface pour sélectionner la sonnerie
 
 <h1>Musique:</h1>
-<li>Ajouter en ligne le mode de lecture aléatoire de la musique automatiquement cache la chanson suivante
-<li>Optimisation de l'utilisation de l'UC
-<li>Optimiser l'efficacité opérationnelle de commutation chansons
-<li>sensibilité au rejet de la médiation ne peut pas être réparé immédiatement Song of the bug
-<li>Fix bug bibliothèque de numérisation (accidentellement modifiées pour résoudre le problème de sonnerie)
-<li>Fil de réparation rejeter un appel, appuyez et causer au lecteur de commencer bug
+<li>Modifier la boîte de dialogue n'est pas compatible avec le système d'assurance-chômage
+<li>Modifier le jeu de hasard, de sorte qu'il peut être retracée
 
-<h1>Appareil photo:</h1>
-<li>Ajouter des photos après la lecture (désactivé par défaut peut être configuré pour ouvrir)
-<li>playback optimisé, offrant la caméra ramené à la suppression des photos, envoyer des trois fonctions
-<li>Optimisation de la vitesse de réponse clé, aussi vite que possible la réponse aux opérations d'utilisateurs suivants: galerie ouverte, passer à la caméra, bouton de menu, le dos, bouton home
-<li>AF amendement au problème pouvait entraîner l'appareil photo fc
+<h1>Lockscreen:</h1>
+<li>style Lense Lockscreen ajouté
+
+<h1>Appareil photo: (remplace l'appareil d'origine cette semaine)</h1>
+<li>Ajouté MIUI - Caméra Stock enlevé
+
 
 <div id="footer"> 
   <h3>mnlk2</h3>
