@@ -56,6 +56,8 @@ h1 {
 
 <h2>1.3.25</h2> 
 
+<h2>WIPE DATA / CAHE HAUTEMENT RECOMMANDE MEME EN OTA</h2>
+
 <h1>Téléphone:</h1>
 <li>Optimisation du commutateur d'appels à trois voies
 <li>La correction de bug multi-touch
