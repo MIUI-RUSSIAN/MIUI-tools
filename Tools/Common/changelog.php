@@ -54,39 +54,29 @@ h1 {
 </head>
 <body>
 
-<h2>1.3.25</h2> 
-
-<h2>WIPE DATA / CAHE HAUTEMENT RECOMMANDE MEME EN OTA</h2>
+<h2>1.4.1</h2> 
 
 <h1>Téléphone:</h1>
-<li>Optimisation du commutateur d'appels à trois voies
-<li>La correction de bug multi-touch
-<li>Ajouté 3e édition des pièces d'assurance-chômage (non exhaustive)
-
-<h1>SMS:
-<li>Ajouter une interface nouveau message (3e édition d'assurance-chômage)
-<li>Nouveaux réglages SMS
-<li>Ajouter un nouveau réglage de style de texte et de la collecte
-<li>Ajouter un nouveau message les pièces jointes
-<li>Ajouter une expression un nouveau message
+<li>Ajout de la 3e édition de l'interface MIUI
+<li>Nouvelle interface utilisateur 3e édition MIUI Dialer ajouté
+<li>Ajout d'envoyer des conversations enregistrées par SMS
 
 <h1>Contact:</h1>
-<li>Contactez la troisième édition de l'optimisation de l'interface utilisateur
+<li>Ajout de la 3e édition de l'interface MIUI
+<li>Restauration de la carte SIM des contacts FC problème résolu
 
-<h1>Thèmes:</h1>
-<li>page de détail de réparation pour la lecture audio lors du passage du même cycle
-<li>Fix Télécharger Détails page n'est pas complète dislocation bouton interrupteur causé
-<li>Ajouter à la liste des applications tierces interface pour sélectionner la sonnerie
+<h1>Desktop / Lockscreen:</h1>
+<li>Ajout de nouveau le téléphone MIUI charge animations
+<li>Nouvelle interface de contrôle MIUI Musique
+<li>Suppression EQ graphique pour la musique sur Lockscreen
+<li>Les nouveaux messages style toast en appuyant sur les boutons Lockscreen (téléphone et SMS)
+<li>Date et heure ajouté à la barre de notification Lockscreen
+<li>Amélioration de la couleur du thème Lockscreen (maintenant plus sombre et beaucoup plus agréable!)
 
-<h1>Musique:</h1>
-<li>Modifier la boîte de dialogue n'est pas compatible avec le système d'assurance-chômage
-<li>Modifier le jeu de hasard, de sorte qu'il peut être retracée
-
-<h1>Lockscreen:</h1>
-<li>style Lense Lockscreen ajouté
-
-<h1>Appareil photo: (remplace l'appareil d'origine cette semaine)</h1>
-<li>Ajouté MIUI - Caméra Stock enlevé
+<h1>Gestionnaire de thèmes:</h1>
+<li>Ajout de la 3e édition de l'interface MIUI
+<li>Nouvelle icône à jour disponibles-ajoutée pour les ressources en ligne Thème
+<li>D'autres optimisations dans le code
 
 
 <div id="footer"> 
