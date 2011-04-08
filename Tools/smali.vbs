@@ -19,21 +19,21 @@ readalltextfile = f.ReadAll
 Const Lecture2 = 1, Ecriture2 = 2
 Dim fso2, f2
 Set fso2 = CreateObject("Scripting.FileSystemObject")
-Set f2 = fso2.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Backup\smali\com\miui\backup\AbstractBackupListActivity.smali", Lecture)
+Set f2 = fso2.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Backup\smali\com\miui\backup\ui\LocalBackupMain.smali", Lecture)
 readalltextfile = f2.ReadAll
         newtextfile = Replace(readalltextfile, "yyyy\u5e74MM\u6708dd\u65e5","dd-MM-yyyy")
-    Set f2 = fso2.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Backup\smali\com\miui\backup\AbstractBackupListActivity.smali", Ecriture, True)
+    Set f2 = fso2.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Backup\smali\com\miui\backup\ui\LocalBackupMain.smali", Ecriture, True)
+        f2.Write newtextfile
+Set f2 = fso2.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Backup\smali\com\miui\milk\ui\PreferenceCloudBackup.smali", Lecture)
+readalltextfile = f2.ReadAll
+        newtextfile = Replace(readalltextfile, "yyyy\u5e74MM\u6708dd\u65e5","dd-MM-yyyy")
+    Set f2 = fso2.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Backup\smali\com\miui\milk\ui\PreferenceCloudBackup.smali", Ecriture, True)
+        f2.Write newtextfile  
+Set f2 = fso2.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Backup\smali\com\miui\milk\ui\ProgressResultActivity.smali", Lecture)
+readalltextfile = f2.ReadAll
+        newtextfile = Replace(readalltextfile, "yyyy\u5e74MM\u6708dd\u65e5","dd-MM-yyyy")
+    Set f2 = fso2.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Backup\smali\com\miui\milk\ui\ProgressResultActivity.smali", Ecriture, True)
         f2.Write newtextfile        
-Set f2 = fso2.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Backup\smali\com\miui\backup\AbstractBackupSelectActivity.smali", Lecture)
-readalltextfile = f2.ReadAll
-        newtextfile = Replace(readalltextfile, "yyyy\u5e74MM\u6708dd\u65e5","dd-MM-yyyy")
-    Set f2 = fso2.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Backup\smali\com\miui\backup\AbstractBackupSelectActivity.smali", Ecriture, True)
-        f2.Write newtextfile        
-Set f2 = fso2.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Backup\smali\com\miui\backup\AbstractRestoreSelectActivity.smali", Lecture)
-readalltextfile = f2.ReadAll
-        newtextfile = Replace(readalltextfile, "yyyy\u5e74MM\u6708dd\u65e5","dd-MM-yyyy")
-    Set f2 = fso2.OpenTextFile(""& cd & "\Workdir\decompile\" & Ver & "\Backup\smali\com\miui\backup\AbstractRestoreSelectActivity.smali", Ecriture, True)
-        f2.Write newtextfile     
         
 Const Lecture3 = 1, Ecriture3 = 2
 Dim fso3, f3
