@@ -154,6 +154,7 @@ xcopy  /SQY %common%\%mod%\build.prop %workdir%\PatchFr\system\
 xcopy  /SQY %common%\META-INF %workdir%\PatchFr\META-INF\
 xcopy  /SQY %common%\%mod%\updater-script.patch %workdir%\PatchFr\META-INF\com\google\android\
 del /Q %workdir%\PatchFr\system\app\framework-res.apk
+del /Q %workdir%\PatchFr\system\app\Provision.apk
 ren %workdir%\PatchFr\META-INF\com\google\android\updater-script.patch updater-script
 cmd /c "%zip%\7z.exe a miui-%mod%-%ver%-patch_fr.zip %workdir%\PatchFr\*"
 @echo ########## Signe Update ##########
@@ -184,6 +185,7 @@ xcopy  /SQY %common%\META-INF %workdir%\AIO\META-INF\
 xcopy  /SQY %common%\%mod%\updater-script.aio %workdir%\AIO\META-INF\com\google\android\
 del /Q %workdir%\AIO\system\app\framework-res.apk
 del /Q %workdir%\AIO\system\app\AppShare.apk
+del /Q %workdir%\AIO\system\app\Provision.apk
 ren %workdir%\AIO\META-INF\com\google\android\updater-script.aio updater-script
 cmd /c "%zip%\7z.exe a miui-%mod%-%ver%-French-AIO.zip %workdir%\AIO\*"
 @echo ########## Signe Update ##########
