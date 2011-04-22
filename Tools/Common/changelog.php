@@ -4,7 +4,7 @@
 <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
 
 <style type="text/css"> 
-<!-- 
+<!-<li>
 html, body{
    margin: 10px;
    padding: 0px;
@@ -54,40 +54,72 @@ h1 {
 </head>
 <body>
 
-<h2>1.4.8</h2> 
+<h2>1.4.22</h2> 
 
-<h1>Téléphone</h1>
-<li>Ajouter: ajoutez un appel à décider d 'afficher la photo de la réparation mise à niveau: Identification de l'appelant image est trop grande peut conduire à ne pas recevoir fixe de téléphone: recherche T9 pour correspondre à la version anglaise ou des numéros conduira à des problèmes d'optimisation plus petits: le cours de la appel à l'optimisation opaque la barre d'état: l'amélioration de l'efficacité de l'appel, le processus d'appel aussi transparent que le fond d'écran de verrouillage, fond d'écran ne semble pas
+<h1>Téléphone:</h1>
+<li>Optimisation de la manipulation de tiers de gestion des appels de dossiers
+<li>Correction d'notification d'appels manqués et les messages, LED de couleur et la fréquence ne serait pas mis en
+<li>À proximité vigueur fixe (FC) lors de la mise renvoi d'appel
+<li>Correction du champ de la hauteur d'entrée problème étroite avec les paramètres de transfert d'appel
+<li>Correction du problème bouton de réponse où il n'a pas disparu après la fin d'un appel
+<li>Identification de l'appelant questions corrigé quelques erreurs FC
 
-<h1>SMS</h1>
-<li>Nouveau: SMS la troisième édition de la nouvelle interface utilisateur libérés
+<h1>SMS / messages:</h1>
+<li>Ajout d'une option afin de permettre un réveil écran lorsque de nouveaux messages sont reçus
+<li>Correction d'un problème d'envoi des messages de groupe, ne pouvait pas renvoyer les messages à nouveau
+<li>Correction d'un problème avec la position du curseur lors de l'écriture des messages et l'utilisation des signatures.
+<li>Optimisé Mms aperçu des images
+<li>Extrait Mms optimisation de l'utilisation des fonctions Galerie pour visionner des photos ou vidéo
 
-<h1>Contact</h1>
-<li>Ajouter: Groupe de contact, la troisième édition de la nouvelle interface
-<li>Ajouté: Caller ID sélectionnez photos pour soutenir l'opération de rotation neuf: coordonnées, l'augmentation de la longueur par un seul journal d'appels supprimer Fix: Parfois, identification de l'appelant ne peut pas être enregistré pour résoudre le problème fixes: Après avoir rejoint le groupe sera toujours affiché la problème est vide
+<h1>Lockscreen:</h1>
+<li>Optimisation des ressources sur l'image par exemple des compteurs et des icônes
+<li>Suppression du widget Lockscreen de la ROM, peut être téléchargé séparément
+<li>Correction d'un problème avec les boutons lecteur de musique pas le temps de pressage correctement premier
+<li>Correction d'un problème pour certains appareils semblant charge lentement en raison de l'inefficacité animation de chargement (Pas vraiment un problème, mais ressemblait le téléphone n'a pas de charge assez vite)
+<li>Correction d'aperçu des messages et des points de vue info appel d'extraits
 
-<h1>Sujet</h1>
-<li>Ajouté: Ajout des sujets d'actualité locale style de verrouillage d'écran personnalisé / style panneau d'affichage / téléphone style de thème
+<h1>Contacts:</h1>
+<li>Contacts ne peut être ajouté à des groupes (fixe)
+<li>Identification de l'appelant FC fixe lors de la sélection une image de l'application Galerie
 
-<h1>Notes</h1>
-<li>Ajouté: notes individuelles pour régler l'alarme pour rappeler l'entrée: sortant Menu - "Plus d'informations -> rappelle-moi d'ajouter: supporte le cryptage au niveau des notes, peut être dans les paramètres du système -> Personnel -> mot de passe personnels pour ouvrir
+<h1>Galerie:</h1>
+<li>Optimisation de l'interaction de l'utilisateur lorsque des photos ou des articles de navigation vidéo
+<li>Correction du problème où quelques photos causé application de FC
 
-<h1>Musique</h1>
-<li>Ajouté: nouvelle interface publié la troisième édition de musique
-<li>Ajouté: widget publié de la musique nouvelle, 4 * 1 et 4 * 4 deux tailles
+<h1>Appareil photo:</h1>
+<li>Nouvelle interface utilisateur plein écran
+<li>Nouvelle fonction anti-vibration
+<li>Correction du problème où pop up menus causé FC
+<li>Les questions d'auto-mise au point fixe pour Milestone
 
-<h1>Lampe de poche</h1>
-<li>Nouveau: dans l'interface de blocage à l'écran, appuyez longuement sur le bouton Accueil pour utiliser rapidement l'optimisation de la torche: embellir bureau lampe de poche MIUI, et aider à augmenter
+<h1>Musique:</h1>
+<li>Nouveau panneau joue maintenant ajouté, entre les playlists
+<li>Optimisation de la liste des chansons a récemment ajouté piste, triée par date
+<li>Optimisation de la vitesse de rafraîchissement dossier
+<li>Musique widgets de bureau à nouveau pour but de réparer un certain nombre de bugs
+<li>Optimisation du panneau de la musique
+<li>Correction de quelques problèmes avec la qualité de couverture de l'album
+<li>Correction du problème où parfois albums ne s'affichent pas correctement
+<li>Correction d'un problème de lecture automatique sur Milestone
 
-<h1>L'éditeur de texte</h1>
-<li>Ajouter: fonction presse-papier multiple qui permet de copier et coller le contenu de trois fixes: Dans certains cas, le menu Edition permet de bloquer les correctifs zone de saisie: Après avoir collé l'espace de problème avant et après
+<h1>Thèmes:</h1>
+<li>Ajout de l'affichage en ligne fonds d'écran et des sonneries
+<li>Ajout d'options pour contrôler les options audio par défaut dans les thèmes
+<li>Optimisation de l'interface utilisateur pour la prévisualisation des thèmes locaux plus efficacement
+<li>Correction de titre par défaut du thème n'apparaît pas dans les thèmes locaux
+<li>Correction du problème où la fenêtre popup informant de composants au sein d'un thème à afficher des éléments dans un ordre incorrect
 
-<h1>Autres</h1>
-<li>Optimisation: message de démarrage de bienvenue pop-up transporteur, la troisième édition de l'adaptation d'assurance-chômage
-<li>Optimisation: Système de préférences curseurs horizontaux (par exemple, faites glisser la barre de contrôle du volume)
-<li>Optimisation: sauvegarde d'assurance-chômage, les détails de réglage fin de l'optimisation: l'interface de suivi du trafic, la troisième édition de l'adaptation d'assurance-chômage
-<li>Optimisation: notes, lampe de poche, appareil photo, l'icône de bureau, utiliser le thème par défaut sans ajouter Nouveau plancher: Ajouter un clic sur le verrouillage de l'écran de bureau de cette appli
-<li>Fix: set motif de déverrouillage de PIN ne suit pas le rôle invisible de la nouvelle: la lutte contre la peine de interception des messages par téléphone ou texte, l'icône de la barre d'état deviendra un point d'exclamation fixe: anti-troubler la barre d'état notifications problème de l'information sera tronquée
+<h1>Notes:</h1>
+<li>Correction du problème où l'ajout d'une nouvelle note sur le bureau apparaît en blanc sur re entrer les notes d'application
+
+<h1>Backup:</h1>
+<li>Ajout du support pour la sauvegarde et la restauration des contacts identification de l'appelant
+
+<h1>Autres:</h1>
+<li>Correction de problèmes avec A2SD + script causait des problèmes
+<li>Surchauffe pendant la recharge. Animation fixe pour empêcher question
+<li>Fixed 12 et 24 heures la date et l'heure, les chaînes distinctes pour les deux options
+
 
 <div id="footer"> 
   <h3>mnlk2</h3>
