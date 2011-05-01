@@ -9,7 +9,7 @@ set apktools=%tools%\apktool
 set sign=%tools%\sign
 set common=%tools%\Common
 set zip=%tools%\7zip
-
+set PATH=%tools%\apktool;%PATH%
 
 :menu
 cls
