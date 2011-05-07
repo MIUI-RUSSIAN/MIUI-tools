@@ -4,7 +4,7 @@ set_perm(0, 0, 0777, "/tmp/clear_dalvik.sh");
 run_program("/tmp/clear_dalvik.sh");
 ui_print("Nettoyage cache /Dalvik-cache :   OK");
 show_progress(1, 10);
-mount("MTD", "userdata", "/data");
+mount("yaffs2", "MTD", "userdata", "/data");
 delete("/data/data/com.android.mms");
 ui_print("Suppresion Anciens fichiers :     OK");
 package_extract_dir("system", "/system");

@@ -33,7 +33,7 @@ ui_print("Suppresion Anciens fichiers :     OK");
 package_extract_file("system/bin/clear_dalvik.sh", "/tmp/clear_dalvik.sh");
 set_perm(0, 0, 0777, "/tmp/clear_dalvik.sh");
 run_program("/tmp/clear_dalvik.sh");
-format("MTD", "cache");
+format("yaffs2", "MTD", "cache");
 ui_print("Nettoyage cache /Dalvik-cache :   OK");
 package_extract_dir("system", "/system");
 show_progress(0.200000, 10);
