@@ -17,7 +17,7 @@
     ui_print("   \\  \\:\\        \\__\\/     \\  \\::/       \\__\\/  ");
     ui_print("    \\__\\/                   \\__\\/               ");
     ui_print("");
-    ui_print("      M I U I - v 1 . 4 . 2 9 - AIO - FR        ");
+    ui_print("      M I U I - v 1 . 5 . 0 6 - AIO - FR        ");
     ui_print("");
     ui_print(" DEVICE:Desire TWITTER: MIUI_mnlk2  PACKAGER: Mnlk2");
     ui_print("");    
@@ -31,9 +31,8 @@ set_perm(0, 0, 0777, "/tmp/backuptool.sh");
 run_program("/tmp/backuptool.sh", "backup");
 ui_print("Sauvegarde des Gapps presents :      OK");
 show_progress(0.500000, 0);
-format("MTD", "system");
-format("MTD", "cache");
-mount("MTD", "system", "/system");
+format("yaffs2", "MTD", "system");
+mount("yaffs2", "MTD", "system", "/system");
 show_progress(0.500000, 40);
 package_extract_dir("system", "/system");
 ui_print("Copie des nouveaux fichier :         OK");
@@ -85,16 +84,14 @@ symlink("busybox", "/system/xbin/[", "/system/xbin/[[",
         "/system/xbin/test", "/system/xbin/tftp", "/system/xbin/time",
         "/system/xbin/top", "/system/xbin/touch", "/system/xbin/tr",
         "/system/xbin/traceroute", "/system/xbin/true", "/system/xbin/tty",
-        "/system/xbin/umount", "/system/xbin/uname", "/system/xbin/uniq",
-        "/system/xbin/unix2dos", "/system/xbin/unlzop", "/system/xbin/unzip",
-        "/system/xbin/uptime", "/system/xbin/usleep", "/system/xbin/uudecode",
-        "/system/xbin/uuencode", "/system/xbin/vi", "/system/xbin/watch",
-        "/system/xbin/wc", "/system/xbin/wget", "/system/xbin/which",
-        "/system/xbin/whoami", "/system/xbin/xargs", "/system/xbin/yes",
+        "/system/xbin/tune2fs", "/system/xbin/umount", "/system/xbin/uname",
+        "/system/xbin/uniq", "/system/xbin/unix2dos", "/system/xbin/unlzop",
+        "/system/xbin/unzip", "/system/xbin/uptime", "/system/xbin/usleep",
+        "/system/xbin/uudecode", "/system/xbin/uuencode", "/system/xbin/vi",
+        "/system/xbin/watch", "/system/xbin/wc", "/system/xbin/wget",
+        "/system/xbin/which", "/system/xbin/whoami", "/system/xbin/xargs",
+        "/system/xbin/yes",
         "/system/xbin/zcat");
-symlink("iwmulticall", "/system/xbin/iwconfig", "/system/xbin/iwgetid",
-        "/system/xbin/iwlist", "/system/xbin/iwpriv",
-        "/system/xbin/iwspy");
 symlink("toolbox", "/system/bin/cat", "/system/bin/cmp",
         "/system/bin/date", "/system/bin/dd", "/system/bin/dmesg",
         "/system/bin/getevent", "/system/bin/getprop", "/system/bin/hd",
@@ -113,7 +110,6 @@ symlink("toolbox", "/system/bin/cat", "/system/bin/cmp",
         "/system/bin/wipe");
 set_perm_recursive(0, 0, 0755, 0644, "/system");
 set_perm_recursive(0, 2000, 0755, 0755, "/system/bin");
-set_perm(0, 0, 06755, "/system/bin/flash_image");
 set_perm(0, 3003, 02750, "/system/bin/netcfg");
 set_perm(0, 3004, 02755, "/system/bin/ping");
 set_perm(0, 2000, 06750, "/system/bin/run-as");
@@ -127,11 +123,13 @@ set_perm_recursive(0, 2000, 0755, 0750, "/system/etc/init.d");
 set_perm(0, 0, 0755, "/system/etc/init.d");
 set_perm(0, 2000, 0550, "/system/etc/init.goldfish.sh");
 set_perm_recursive(0, 0, 0755, 0555, "/system/etc/ppp");
+set_perm_recursive(0, 2000, 0755, 0644, "/system/vendor");
+set_perm_recursive(0, 0, 0755, 0644, "/system/vendor/firmware");
+set_perm(0, 2000, 0755, "/system/vendor/firmware");
 set_perm_recursive(0, 2000, 0755, 0755, "/system/xbin");
 set_perm(0, 0, 06755, "/system/xbin/apply_firewall");
 set_perm(0, 0, 06755, "/system/xbin/apply_theme");
 set_perm(0, 0, 06755, "/system/xbin/dumplog");
-set_perm(0, 0, 06755, "/system/xbin/hcitool");
 set_perm(0, 0, 06755, "/system/xbin/librank");
 set_perm(0, 0, 06755, "/system/xbin/mv2sd");
 set_perm(0, 0, 06755, "/system/xbin/ota");

@@ -17,13 +17,13 @@
     ui_print("   \\  \\:\\        \\__\\/     \\  \\::/       \\__\\/  ");
     ui_print("    \\__\\/                   \\__\\/               ");
     ui_print("");
-    ui_print("     M I U I - v 1 . 4 . 2 9 French Patch     ");
+    ui_print("     M I U I - v 1 . 5 . 0 6 French Patch     ");
     ui_print("");
     ui_print(" DEVICE:Desire TWITTER:MIUI_mnlk2 PACKAGER:Mnlk2");
     ui_print("      SUPPORT:FrAndroid.com / miui-dev.com      ");
     ui_print("------------------------------------------------");
     ui_print("");
-mount("MTD", "system", "/system");
+mount("yaffs2", "MTD", "system", "/system");
 show_progress(1, 10);
 delete("/data/data/com.android.mms/cache/sms_frequently_used_phrase");
 delete("/system/app/GooglePinyin.apk");
