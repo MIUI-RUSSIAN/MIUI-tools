@@ -9,7 +9,9 @@ set apktools=%tools%\apktool
 set sign=%tools%\sign
 set common=%tools%\Common
 set zip=%tools%\7zip
+set mod=I9505
 set PATH=%tools%\apktool;%PATH%
+
 
 :menu
 cls
@@ -28,7 +30,7 @@ if "%choix%"=="1" GOTO Decompile
 if "%choix%"=="2" GOTO Copy
 if "%choix%"=="3" GOTO Compile
 if "%choix%"=="4" GOTO Final
-if "%choix%"=="5" GOTO model
+if "%choix%"=="5" GOTO menu2
 if "%choix%"=="6" GOTO Clean
 if "%choix%"=="7" GOTO Finish 
 if "%choix%"=="" GOTO menu
@@ -38,12 +40,33 @@ if not "%choix%"=="89" GOTO menu
 :Decompile
 cls
 rmdir /S /Q %workdir%\Decompile\%ver%
+del %home%\etat_decompil.txt
+type nul >%home%\etat_decompil.txt
 cmd /c %apktools%\apktool if %workdir%\origin\%ver%\framework-res.apk
-FOR /r %workdir%\origin\%ver%\ %%i IN (*.apk) DO (
+cmd /c %apktools%\apktool if %workdir%\origin\%ver%\framework-miui-res.apk
+cmd /c %apktools%\apktool if %workdir%\origin\%ver%\twframework-res.apk
+FOR /r %workdir%\origin\%ver%\ %%i IN (*.apk) DO ( 
 echo.
 echo.
 echo ######  %%~ni  ######
-cmd /c %apktools%\apktool d %%i %workdir%/decompile/%ver%/%%~ni )
+echo ######  %%~ni  ###### >>%home%\etat_decompil.txt
+cmd /c %apktools%\apktool d %%i %workdir%/decompile/%ver%/%%~ni >%home%\erreur_decompil.txt 2>&1
+find /I "androlib" %home%\erreur_decompil.txt >nul
+if not errorlevel 1 ( 
+cmd /c %tools%\Notepad2\notepad2 %home%\erreur_decompil.txt
+echo -- erreur sur la decompilation --
+pause)
+for /f "tokens=* delims=:" %%i in ('findstr .* %home%\erreur_decompil.txt') do echo %%i >> %home%\etat_decompil.txt )
+FOR /r %workdir%\origin\ %%i IN (*.jar) DO (
+echo ## %%~ni ##
+echo ## %%~ni ## >>%home%\etat_decompil.txt
+cmd /c %tools%\apktool\apktool d %%i %workdir%\decoded\%%~nxi >%home%\erreur_decompil.txt 2>&1
+find /I "androlib" %home%\erreur_decompil.txt >nul
+if not errorlevel 1 ( 
+cmd /c %tools%\Notepad2\notepad2 %home%\erreur_decompil.txt
+echo -- erreur sur la decompilation --
+pause)
+for /f "tokens=* delims=:" %%i in ('findstr .* %home%\erreur_decompil.txt') do echo %%i >> %home%\etat_decompil.txt )
 pause
 GOTO menu
 
@@ -51,12 +74,18 @@ GOTO menu
 :Compile
 cls
 rmdir /S /Q %workdir%\out\%ver%
+del %home%\etat_compil.txt
+type nul >%home%\etat_compil.txt
 FOR /r %workdir%\origin\%ver%\ %%i IN (*.apk) DO (
 echo.
-echo.
-echo ######  %%~ni  ######
-cmd /c %apktools%\apktool b %workdir%\decompile\%ver%\%%~ni %workdir%/out/%ver%/%%~nxi
-)
+echo ## %%~ni ##
+echo ## %%~ni ## >>%home%\etat_compil.txt
+cmd /c apktool b %workdir%\decompile\%ver%\%%~ni %workdir%\out\%ver%\%%~nxi >%home%\erreur_compil.txt 2>&1
+find /I "androlib" %home%\erreur_compil.txt >nul
+if not errorlevel 1 pause 
+for /f "tokens=* delims=:" %%i in ('findstr .* %home%\erreur_compil.txt') do echo %%i >> %home%\etat_compil.txt
+ )
+
 pause
 GOTO menu
 
@@ -64,8 +93,7 @@ GOTO menu
 :Copy
 cls
 FOR /r %workdir%\origin\%ver%\ %%i IN (*.apk) DO (
-xcopy  /SY ..\Fr\%%~ni %workdir%\Decompile\%ver%\%%~ni)
-%tools%\smali.vbs %ver% %CD%
+xcopy  /SY ..\Fr\%%~ni.apk %workdir%\Decompile\%ver%\%%~ni)
 pause
 GOTO menu
 
@@ -105,68 +133,28 @@ pause
 GOTO menu
 
 
-:model
-cls
-@echo *********************Model**********************
-@echo *1. Nexus One                                  *
-@echo *2. Desire                                     *
-@echo ************************************************
-Set /P mod1= Model : 
-if "%mod1%"=="1" ( Set mod=N1
-GOTO menu2 )
-if "%mod1%"=="2" ( Set mod=bravo
-GOTO menu2 )
-if "%mod1%"=="" set mod=autre
-if not "%mod1%"=="3456789" set mod=autre
-if "%mod%"=="autre" GOTO model
-
 :menu2
 cd %workdir%
 cls
 @echo ******************MENU %mod%********************
-@echo *1. Patch FR                                   *
-@echo *2. AIO FR                                     *
-@echo *3. Hotfix                                     *
-@echo *4. Suppimer les fichier temporaire            *
-@echo *5. Retour choix modele                        *
-@echo *6. Retour Precedent menu                      *
-@echo *7. Quitter                                    *
+@echo *1. Creer zip                                  *
+@echo *2. Suppimer les fichier temporaire            *
+@echo *3. Retour choix modele   	             *
+@echo *4. Retour Precedent menu                      *
+@echo *5. Quitter 		                     *
 @echo ************************************************
 Set /P choix2= Que voulez-vous faire?  
-if "%choix2%"=="1" GOTO patch
-if "%choix2%"=="2" GOTO aio
-if "%choix2%"=="3" GOTO hotfix
-if "%choix2%"=="4" GOTO clean2
-if "%choix2%"=="5" GOTO model
-if "%choix2%"=="6" GOTO menu
-if "%choix2%"=="7" GOTO Finish 
+if "%choix2%"=="1" GOTO aio
+if "%choix2%"=="2" GOTO clean2
+if "%choix2%"=="3" GOTO model
+if "%choix2%"=="4" GOTO menu
+if "%choix2%"=="5" GOTO Finish
 if "%choix%"=="" GOTO menu2
-if not "%choix%"=="89" GOTO menu2
-
-
-:patch
-cls
-rmdir /S /Q %workdir%\PatchFr
-xcopy  /SQY %workdir%\final\%ver%\*.apk %workdir%\PatchFr\system\app\ 
-xcopy  /SQY %workdir%\final\%ver%\framework-res.apk %workdir%\PatchFr\system\framework\ 
-xcopy  /SQY %common%\system\*.* %workdir%\PatchFr\system\
-xcopy  /SQY %common%\%mod%\build.prop %workdir%\PatchFr\system\
-xcopy  /SQY %common%\META-INF %workdir%\PatchFr\META-INF\
-xcopy  /SQY %common%\%mod%\updater-script.patch %workdir%\PatchFr\META-INF\com\google\android\
-del /Q %workdir%\PatchFr\system\app\framework-res.apk
-del /Q %workdir%\PatchFr\system\app\Provision.apk
-ren %workdir%\PatchFr\META-INF\com\google\android\updater-script.patch updater-script
-cmd /c "%zip%\7z.exe a miui-%mod%-%ver%-patch_fr.zip %workdir%\PatchFr\*"
-@echo ########## Signe Update ##########
-java -jar %sign%\signapk.jar -w %sign%\testkey.x509.pem %sign%\testkey.pk8 miui-%mod%-%ver%-patch_fr.zip miui-%mod%-%ver%-patch_fr-signed.zip
-del /Q %workdir%\miui-%mod%-%ver%-patch_fr.zip
-move %workdir%\miui-%mod%-%ver%-patch_fr-signed.zip %out%\
-pause
-rmdir /S /Q %workdir%\PatchFr
-GOTO menu2
+if not "%choix%"=="7890" GOTO menu2
 
 
 :AIO
+@echo off
 cls
 rmdir /S /Q %workdir%\Temp
 rmdir /S /Q %workdir%\Temp
@@ -174,17 +162,18 @@ mkdir Temp\%mod%
 cd Temp\%mod%
 cmd /c "%zip%\7z.exe x %base%\%mod%\miui-%mod%-%ver%_deodexed-signed.zip"
 cd %workdir%\
-xcopy  /SQY %workdir%\Temp\%mod%\META-INF\com\android %workdir%\AIO\META-INF\com\android\
-xcopy  /SQY %workdir%\Temp\%mod%\system %workdir%\AIO\system\
+xcopy  /SQY %workdir%\Temp\%mod%\META-INF\com\android\ %workdir%\AIO\META-INF\com\android\
+xcopy  /SQY %workdir%\Temp\%mod%\system\ %workdir%\AIO\system\
+xcopy  /SQY %workdir%\Temp\%mod%\data\ %workdir%\AIO\data\
 xcopy  /SQY %workdir%\Temp\%mod%\boot.img %workdir%\AIO\
 xcopy  /SQY %workdir%\final\%ver%\*.apk %workdir%\AIO\system\app\ 
-xcopy  /SQY %workdir%\final\%ver%\framework-res.apk %workdir%\AIO\system\framework\ 
-xcopy  /SQY %common%\system\*.* %workdir%\AIO\system\
+xcopy  /SQY %workdir%\final\%ver%\framework-res.apk %workdir%\AIO\system\framework\
+xcopy  /SQY %workdir%\final\%ver%\framework-miui-res.apk %workdir%\AIO\system\framework\
+xcopy  /SQY %workdir%\final\%ver%\twframework-res.apk %workdir%\AIO\system\framework\
 xcopy  /SQY %common%\%mod%\build.prop %workdir%\AIO\system\
 xcopy  /SQY %common%\META-INF %workdir%\AIO\META-INF\
-xcopy  /SQY %common%\%mod%\updater-script.aio %workdir%\AIO\META-INF\com\google\android\
+xcopy  /SQY %common%\%mod%\updater-script %workdir%\AIO\META-INF\com\google\android\
 del /Q %workdir%\AIO\system\app\framework-res.apk
-del /Q %workdir%\AIO\system\app\AppShare.apk
 del /Q %workdir%\AIO\system\app\Provision.apk
 ren %workdir%\AIO\META-INF\com\google\android\updater-script.aio updater-script
 cmd /c "%zip%\7z.exe a miui-%mod%-%ver%-French-AIO.zip %workdir%\AIO\*"
@@ -198,34 +187,9 @@ rmdir /S /Q %workdir%\Temp
 GOTO menu2
 
 
-:hotfix
-cls
-rmdir /S /Q %workdir%\Hotfix
-xcopy  /SQY %workdir%\final\%ver%\*.apk %workdir%\Hotfix\system\app\ 
-xcopy  /SQY %workdir%\final\%ver%\framework-res.apk %workdir%\Hotfix\system\framework\ 
-xcopy  /SQY %common%\system\bin\clear_dalvik.sh %workdir%\Hotfix\system\bin\
-xcopy  /SQY %common%\%mod%\build.prop %workdir%\Hotfix\system\
-xcopy  /SQY %common%\META-INF %workdir%\Hotfix\META-INF\
-xcopy  /SQY %common%\%mod%\updater-script.hotfix %workdir%\Hotfix\META-INF\com\google\android\
-del /Q %workdir%\Hotfix\system\app\framework-res.apk
-ren %workdir%\Hotfix\META-INF\com\google\android\updater-script.hotfix updater-script
-cls
-echo %ver%
-Set /P Nver= Nouvelle Version : 
-cmd /c "%zip%\7z.exe a miui-%mod%-%ver%-to-%Nver%.zip %workdir%\Hotfix\*"
-@echo ########## Signe Update ##########
-java -jar %sign%\signapk.jar -w %sign%\testkey.x509.pem %sign%\testkey.pk8 miui-%mod%-%ver%-to-%Nver%.zip miui-%mod%-%ver%-to-%Nver%-signed.zip
-del /Q %workdir%\miui-%mod%-%ver%-to-%Nver%.zip
-move %workdir%\miui-%mod%-%ver%-to-%Nver%-signed.zip %out%\
-pause
-rmdir /S /Q %workdir%\Hotfix
-GOTO menu2
-
-
 :clean2
 cls
 rmdir /S /Q %workdir%\AIO
-rmdir /S /Q %workdir%\PatchFr
 rmdir /S /Q %workdir%\Hotfix
 rmdir /S /Q %workdir%\Temp
 del /Q *.zip

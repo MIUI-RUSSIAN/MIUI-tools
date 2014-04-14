@@ -1,4 +1,5 @@
 resources.arsc
 classes.dex
+res\*-rfr\
 res\*-fr\
 res\*-fr-*\

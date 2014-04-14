@@ -1,0 +1,134 @@
+ui_print("************************************");
+ui_print("      MIUI V5 GTi9505 S4 JB FR      ");
+ui_print("     http://www.miui-france.org     ");
+ui_print("************************************");
+ui_print("TELEPHONE       : GTi9505 S4        ");
+ui_print("VERSION MIUI    : 4.4.4             ");
+ui_print("VERSION ANDROID : Jelly Bean        ");
+ui_print("PACKAGER        : D.Price           ");
+ui_print("TRADUCTION      : miui-france.org   ");
+ui_print("************************************");
+ui_print("                                    ");
+ui_print("Installation de MIUI FR en cours.   ");
+ui_print("Patientez svp...                    ");
+assert(getprop("ro.product.device") == "jflte" ||
+       getprop("ro.build.product") == "jflte" ||
+       getprop("ro.product.device") == "jfltexx" || getprop("ro.build.product") == "jfltexx" ||
+       getprop("ro.product.device") == "i9505" || getprop("ro.build.product") == "i9505" ||
+       getprop("ro.product.device") == "GT-I9505" || getprop("ro.build.product") == "GT-I9505" ||
+       getprop("ro.product.device") == "jgedlte" || getprop("ro.build.product") == "jgedlte" ||
+       getprop("ro.product.device") == "i9505g" || getprop("ro.build.product") == "i9505g" ||
+       getprop("ro.product.device") == "GT-I9505G" || getprop("ro.build.product") == "GT-I9505G");
+show_progress(0.500000, 0);
+ui_print("Formatting system...");
+unmount("/system");
+format("ext4", "EMMC", "/dev/block/mmcblk0p16", "0");
+ui_print("Installing system files...");
+mount("ext4", "EMMC", "/dev/block/mmcblk0p16", "/system");
+package_extract_dir("system", "/system");
+ui_print("Creating system links...");
+symlink("/data/misc/audio/mbhc.bin", "/system/etc/firmware/wcd9310/wcd9310_mbhc.bin");
+symlink("/data/misc/audio/wcd9310_anc.bin", "/system/etc/firmware/wcd9310/wcd9310_anc.bin");
+symlink("/etc/thermal-engine-8064ab.conf", "/system/etc/thermal-engine.conf");
+symlink("/etc/thermald-8064ab.conf", "/system/etc/thermald.conf");
+symlink("/firmware-mdm/image/acdb.mbn", "/system/etc/firmware/acdb.mbn");
+symlink("/firmware-mdm/image/apps.mbn", "/system/etc/firmware/apps.mbn");
+symlink("/firmware-mdm/image/dsp1.mbn", "/system/etc/firmware/dsp1.mbn");
+symlink("/firmware-mdm/image/dsp2.mbn", "/system/etc/firmware/dsp2.mbn");
+symlink("/firmware-mdm/image/dsp3.mbn", "/system/etc/firmware/dsp3.mbn");
+symlink("/firmware-mdm/image/efs1.mbn", "/system/etc/firmware/efs1.mbn");
+symlink("/firmware-mdm/image/efs2.mbn", "/system/etc/firmware/efs2.mbn");
+symlink("/firmware-mdm/image/efs3.mbn", "/system/etc/firmware/efs3.mbn");
+symlink("/firmware-mdm/image/mdm_acdb.img", "/system/etc/firmware/mdm_acdb.img");
+symlink("/firmware-mdm/image/rpm.mbn", "/system/etc/firmware/rpm.mbn");
+symlink("/firmware-mdm/image/sbl1.mbn", "/system/etc/firmware/sbl1.mbn");
+symlink("/firmware-mdm/image/sbl2.mbn", "/system/etc/firmware/sbl2.mbn");
+symlink("/firmware/image/lkmauth.b00", "/system/etc/firmware/lkmauth.b00");
+symlink("/firmware/image/lkmauth.b01", "/system/etc/firmware/lkmauth.b01");
+symlink("/firmware/image/lkmauth.b02", "/system/etc/firmware/lkmauth.b02");
+symlink("/firmware/image/lkmauth.b03", "/system/etc/firmware/lkmauth.b03");
+symlink("/firmware/image/lkmauth.mdt", "/system/etc/firmware/lkmauth.mdt");
+symlink("/firmware/image/mobicore.b00", "/system/etc/firmware/mobicore.b00");
+symlink("/firmware/image/mobicore.b01", "/system/etc/firmware/mobicore.b01");
+symlink("/firmware/image/mobicore.b02", "/system/etc/firmware/mobicore.b02");
+symlink("/firmware/image/mobicore.b03", "/system/etc/firmware/mobicore.b03");
+symlink("/firmware/image/mobicore.mdt", "/system/etc/firmware/mobicore.mdt");
+symlink("/firmware/image/modem_f2.*", "/system/etc/firmware/modem_fw.*");
+symlink("/firmware/image/q6.b00", "/system/etc/firmware/q6.b00");
+symlink("/firmware/image/q6.b01", "/system/etc/firmware/q6.b01");
+symlink("/firmware/image/q6.b03", "/system/etc/firmware/q6.b03");
+symlink("/firmware/image/q6.b04", "/system/etc/firmware/q6.b04");
+symlink("/firmware/image/q6.b05", "/system/etc/firmware/q6.b05");
+symlink("/firmware/image/q6.b06", "/system/etc/firmware/q6.b06");
+symlink("/firmware/image/q6.mdt", "/system/etc/firmware/q6.mdt");
+symlink("/firmware/image/tima.b00", "/system/etc/firmware/tima.b00");
+symlink("/firmware/image/tima.b01", "/system/etc/firmware/tima.b01");
+symlink("/firmware/image/tima.b02", "/system/etc/firmware/tima.b02");
+symlink("/firmware/image/tima.b03", "/system/etc/firmware/tima.b03");
+symlink("/firmware/image/tima.mdt", "/system/etc/firmware/tima.mdt");
+symlink("/firmware/image/tzapps.b00", "/system/etc/firmware/tzapps.b00");
+symlink("/firmware/image/tzapps.b01", "/system/etc/firmware/tzapps.b01");
+symlink("/firmware/image/tzapps.b02", "/system/etc/firmware/tzapps.b02");
+symlink("/firmware/image/tzapps.b03", "/system/etc/firmware/tzapps.b03");
+symlink("/firmware/image/tzapps.mdt", "/system/etc/firmware/tzapps.mdt");
+symlink("/firmware/image/vidc.b00", "/system/etc/firmware/vidc.b00");
+symlink("/firmware/image/vidc.b01", "/system/etc/firmware/vidc.b01");
+symlink("/firmware/image/vidc.b02", "/system/etc/firmware/vidc.b02");
+symlink("/firmware/image/vidc.b03", "/system/etc/firmware/vidc.b03");
+symlink("/firmware/image/vidc.mdt", "/system/etc/firmware/vidc.mdt");
+symlink("/system/bin/mksh", "/system/bin/sh");
+symlink("/system/bin/toolbox", "/system/bin/cat", "/system/bin/chcon",
+        "/system/bin/chmod", "/system/bin/chown", "/system/bin/cmp",
+        "/system/bin/cp", "/system/bin/date", "/system/bin/dd",
+        "/system/bin/df", "/system/bin/dmesg", "/system/bin/du",
+        "/system/bin/getenforce", "/system/bin/getevent", "/system/bin/getprop",
+        "/system/bin/getsebool", "/system/bin/grep", "/system/bin/hd",
+        "/system/bin/id", "/system/bin/ifconfig", "/system/bin/iftop",
+        "/system/bin/insmod", "/system/bin/ioctl", "/system/bin/ionice",
+        "/system/bin/kill", "/system/bin/ln", "/system/bin/load_policy",
+        "/system/bin/log", "/system/bin/ls", "/system/bin/lsmod",
+        "/system/bin/lsof", "/system/bin/md5", "/system/bin/mkdir",
+        "/system/bin/mount", "/system/bin/mv", "/system/bin/nandread",
+        "/system/bin/netstat", "/system/bin/newfs_msdos", "/system/bin/notify",
+        "/system/bin/playback", "/system/bin/printenv", "/system/bin/ps",
+        "/system/bin/reboot", "/system/bin/renice", "/system/bin/restorecon",
+        "/system/bin/rm", "/system/bin/rmdir", "/system/bin/rmmod",
+        "/system/bin/route", "/system/bin/runcon", "/system/bin/schedtop",
+        "/system/bin/sendevent", "/system/bin/setconsole",
+        "/system/bin/setenforce", "/system/bin/setprop",
+        "/system/bin/setsebool", "/system/bin/sleep", "/system/bin/smd",
+        "/system/bin/start", "/system/bin/stop", "/system/bin/sync",
+        "/system/bin/top", "/system/bin/touch", "/system/bin/touchinput",
+        "/system/bin/umount", "/system/bin/uptime", "/system/bin/vmstat",
+        "/system/bin/watchprops",
+        "/system/bin/wipe");
+symlink("/system/bin/wiperiface_v02", "/system/bin/wiperiface");
+symlink("/system/csc/TGY/csc_contents", "/system/csc_contents");
+symlink("/system/fonts/Roboto-Bold.ttf", "/system/fonts/DroidSans-Bold.ttf");
+symlink("/system/fonts/Roboto-Regular.ttf", "/system/fonts/DroidSans.ttf");
+symlink("/system/lib/libwiperjni_v02.so", "/system/lib/libwiperjni.so");
+symlink("/system/lib/libxt_v02.so", "/system/lib/libxt_native.so");
+ui_print("Set permission...");
+set_perm_recursive(0, 0, 0755, 0644, "/system");
+set_perm_recursive(0, 2000, 0755, 0755, "/system/bin");
+set_perm(0, 1000, 04750, "/system/bin/diag_mdlog");
+set_perm(0, 3003, 02750, "/system/bin/netcfg");
+set_perm(0, 3004, 02755, "/system/bin/ping");
+set_perm(0, 0, 0700, "/system/bin/rtccd");
+set_perm(0, 2000, 06750, "/system/bin/run-as");
+set_perm(1002, 1002, 0440, "/system/etc/dbus.conf");
+set_perm(1014, 2000, 0550, "/system/etc/dhcpcd/dhcpcd-run-hooks");
+set_perm(0, 0, 0744, "/system/lib/liblbesec.so");
+set_perm_recursive(0, 0, 0755, 06755, "/system/xbin");
+set_perm(0, 0, 0644, "/system/xbin/dexdump");
+set_perm(0, 1000, 06750, "/system/xbin/shelld");
+ui_print("Update Boot image...");
+show_progress(0.200000, 0);
+show_progress(0.200000, 10);
+package_extract_file("boot.img", "/dev/block/mmcblk0p20");
+mount("ext4", "EMMC", "/dev/block/mmcblk0p29", "/data");
+package_extract_dir("data", "/data");
+set_perm_recursive(1000, 1000, 0755, 0644, "/data/preinstall_apps");
+show_progress(0.100000, 0);
+unmount("/data");
+unmount("/system");
