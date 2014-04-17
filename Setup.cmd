@@ -129,7 +129,6 @@ rmdir /S /Q %workdir%\decompile
 rmdir /S /Q %workdir%\out
 rmdir /S /Q %workdir%\temp
 rmdir /S /Q %workdir%\final
-del /Q %home%\*.txt
 pause
 GOTO menu
 
@@ -159,21 +158,27 @@ if not "%choix%"=="7890" GOTO menu2
 cls
 rmdir /S /Q %workdir%\Temp
 rmdir /S /Q %workdir%\Temp
-mkdir Temp\
-cd Temp\
-cmd /c "%zip%\7z.exe x %base%\miui-%mod%-%ver%_deodexed-signed.zip"
+mkdir Temp\%mod%
+cd Temp\%mod%
+cmd /c "%zip%\7z.exe x %base%\%mod%\miui-%mod%-%ver%_deodexed-signed.zip"
 cd %workdir%\
-xcopy  /SQY %workdir%\final\%ver%\*.apk %workdir%\temp\system\app\ 
-xcopy  /SQY %workdir%\final\%ver%\framework-res.apk %workdir%\temp\system\framework\
-xcopy  /SQY %workdir%\final\%ver%\framework-miui-res.apk %workdir%\temp\system\framework\
-xcopy  /SQY %workdir%\final\%ver%\twframework-res.apk %workdir%\temp\system\framework\
-del /Q %workdir%\temp\system\app\framework-res.apk
-del /Q %workdir%\temp\system\app\framework-miui-res.apk
-del /Q %workdir%\temp\system\app\twframework-res.apk
-del /Q %workdir%\temp\system\app\Provision.apk
-cmd /c "%zip%\7z.exe a miui-%mod%-%ver%-French-AIO.zip %workdir%\temp\*"
+xcopy  /SQY %workdir%\Temp\%mod%\META-INF\com\android\ %workdir%\AIO\META-INF\com\android\
+xcopy  /SQY %workdir%\Temp\%mod%\system\ %workdir%\AIO\system\
+xcopy  /SQY %workdir%\Temp\%mod%\data\ %workdir%\AIO\data\
+xcopy  /SQY %workdir%\Temp\%mod%\boot.img %workdir%\AIO\
+xcopy  /SQY %workdir%\final\%ver%\*.apk %workdir%\AIO\system\app\ 
+xcopy  /SQY %workdir%\final\%ver%\framework-res.apk %workdir%\AIO\system\framework\
+xcopy  /SQY %workdir%\final\%ver%\framework-miui-res.apk %workdir%\AIO\system\framework\
+xcopy  /SQY %workdir%\final\%ver%\twframework-res.apk %workdir%\AIO\system\framework\
+xcopy  /SQY %common%\%mod%\build.prop %workdir%\AIO\system\
+xcopy  /SQY %common%\META-INF %workdir%\AIO\META-INF\
+xcopy  /SQY %common%\%mod%\updater-script %workdir%\AIO\META-INF\com\google\android\
+del /Q %workdir%\AIO\system\app\framework-res.apk
+del /Q %workdir%\AIO\system\app\Provision.apk
+ren %workdir%\AIO\META-INF\com\google\android\updater-script.aio updater-script
+cmd /c "%zip%\7z.exe a miui-%mod%-%ver%-French-AIO.zip %workdir%\AIO\*"
 @echo ########## Signe Update ##########
-java -Xmx4096m -jar %sign%\signapk.jar -w %sign%\testkey.x509.pem %sign%\testkey.pk8 miui-%mod%-%ver%-French-AIO.zip miui-%mod%-%ver%-French-AIO-signed.zip
+java -jar %sign%\signapk.jar -w %sign%\testkey.x509.pem %sign%\testkey.pk8 miui-%mod%-%ver%-French-AIO.zip miui-%mod%-%ver%-French-AIO-signed.zip
 del /Q %workdir%\miui-%mod%-%ver%-French-AIO.zip
 move %workdir%\miui-%mod%-%ver%-French-AIO-signed.zip %out%\
 pause
